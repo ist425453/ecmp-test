@@ -1,6 +1,8 @@
 `timescale 1ns / 1ps
 `include "iob_lib.vh"
 
+
+
 module circuit_tb;
 
    `CLOCK(clk, 10)
@@ -16,7 +18,7 @@ module circuit_tb;
       $dumpvars();
       en=0;
       for (i=0; i<100; i=i+1) begin
-         @(posedge clk) #1 x=i; en=1;
+         @(posedge clk) #1 x=1; en=1;
          @(posedge clk) #1 en=0;
       end
 
